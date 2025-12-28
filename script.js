@@ -1,12 +1,12 @@
-/**************************************
- * CONFIG
- **************************************/
+// 1️⃣ Get affiliate ref from site URL (?ref=xxxx)
+const params = new URLSearchParams(window.location.search);
+const affiliateRef = params.get("ref") || "direct";
+
+// 2️⃣ Your Apps Script mini-app base URL
 const MINI_APP_URL =
   "https://script.google.com/macros/s/AKfycbz06tXfETSy34MsfcKNVWMw3C08SQtNA8Aq0g5oI60vHvNSrqjKQzZljS0GbkgctDIJNQ/exec";
 
-/**************************************
- * PRODUCTS (STATIC FOR NOW)
- **************************************/
+// 3️⃣ Products list
 const products = [
   {
     id: "pdt_ANjXatzKvUuliwpfkodzs",
@@ -16,23 +16,15 @@ const products = [
   }
 ];
 
-/**************************************
- * GET AFFILIATE REF FROM URL
- **************************************/
-const params = new URLSearchParams(window.location.search);
-const affiliateRef = params.get("ref") || "direct";
-
-/**************************************
- * RENDER PRODUCTS
- **************************************/
+// 4️⃣ Render products
 const grid = document.getElementById("product-grid");
+grid.innerHTML = "";
 
 products.forEach(p => {
-  const div = document.createElement("div");
-
   const buyLink =
-    `${MINI_APP_URL}?ref=${encodeURIComponent(affiliateRef)}&product=${encodeURIComponent(p.id)}`;
+    `${MINI_APP_URL}?ref=${encodeURIComponent(affiliateRef)}&product=${p.id}`;
 
+  const div = document.createElement("div");
   div.innerHTML = `
     <h3>${p.name}</h3>
     <p>${p.description}</p>
