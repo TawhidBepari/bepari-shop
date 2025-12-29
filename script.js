@@ -1,12 +1,20 @@
-// 1️⃣ Get affiliate ref from site URL (?ref=xxxx)
+/***********************
+ * 1️⃣ Read affiliate ref from Netlify page URL
+ * Example:
+ * https://yoursite.netlify.app/?ref=affiliate123
+ ***********************/
 const params = new URLSearchParams(window.location.search);
 const affiliateRef = params.get("ref") || "direct";
 
-// 2️⃣ Your Apps Script mini-app base URL
+/***********************
+ * 2️⃣ Apps Script mini-app URL (DO NOT change params)
+ ***********************/
 const MINI_APP_URL =
   "https://script.google.com/macros/s/AKfycbz06tXfETSy34MsfcKNVWMw3C08SQtNA8Aq0g5oI60vHvNSrqjKQzZljS0GbkgctDIJNQ/exec";
 
-// 3️⃣ Products list
+/***********************
+ * 3️⃣ Products (UI only — product ID must match Dodo)
+ ***********************/
 const products = [
   {
     id: "pdt_ANjXatzKvUuliwpfkodzs",
@@ -16,11 +24,15 @@ const products = [
   }
 ];
 
-// 4️⃣ Render products
+/***********************
+ * 4️⃣ Render products + Buy buttons
+ ***********************/
 const grid = document.getElementById("product-grid");
 grid.innerHTML = "";
 
 products.forEach(p => {
+  // IMPORTANT:
+  // Buy button goes to Apps Script, NOT Dodo
   const buyLink =
     `${MINI_APP_URL}?ref=${encodeURIComponent(affiliateRef)}&product=${p.id}`;
 
@@ -29,7 +41,7 @@ products.forEach(p => {
     <h3>${p.name}</h3>
     <p>${p.description}</p>
     <strong>${p.price}</strong><br><br>
-    <a href="${buyLink}" target="_blank">Buy</a>
+    <a href="${buyLink}" target="_blank" rel="noopener">Buy</a>
   `;
 
   grid.appendChild(div);
