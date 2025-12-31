@@ -37,14 +37,15 @@ products.forEach(p => {
     `${MINI_APP_URL}?ref=${encodeURIComponent(affiliateRef)}&product=${p.id}`;
 
   const div = document.createElement("div");
-  div.innerHTML = `
-    <h3>${p.name}</h3>
-    <p>${p.description}</p>
-    <strong>${p.price}</strong><br><br>
-    <a class="buy-button" href="${buyLink}" target="_blank" rel="noopener">
-      Buy
-    </a>
-  `;
+div.innerHTML = `
+  <img class="product-image" src="${p.image}" alt="${p.name}">
+  <h3>${p.name}</h3>
+  <p>${p.description}</p>
+  <strong>${p.price}</strong><br><br>
+  <a class="buy-button" href="${buyLink}" target="_blank" rel="noopener">
+    Buy
+  </a>
+`;
 
   grid.appendChild(div);
 });
