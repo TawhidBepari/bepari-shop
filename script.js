@@ -20,8 +20,8 @@ const products = [
     id: "pdt_ANjXatzKvUuliwpfkodzs",
     name: "Test Product",
     description: "This is a test product",
-    price: "$19.99"
-    image: "product1.jpg"
+    price: "$19.99",
+    image: "product1.jpg"   // must exist in site root
   }
 ];
 
@@ -38,15 +38,21 @@ products.forEach(p => {
     `${MINI_APP_URL}?ref=${encodeURIComponent(affiliateRef)}&product=${p.id}`;
 
   const div = document.createElement("div");
-div.innerHTML = `
-  <img class="product-image" src="${p.image}" alt="${p.name}">
-  <h3>${p.name}</h3>
-  <p>${p.description}</p>
-  <strong>${p.price}</strong><br><br>
-  <a class="buy-button" href="${buyLink}" target="_blank" rel="noopener">
-    Buy
-  </a>
-`;
+
+  // Image is optional — prevents script crash if missing
+  const imgHTML = p.image
+    ? `<img class="product-image" src="${p.image}" alt="${p.name}">`
+    : "";
+
+  div.innerHTML = `
+    ${imgHTML}
+    <h3>${p.name}</h3>
+    <p>${p.description}</p>
+    <strong>${p.price}</strong><br><br>
+    <a class="buy-button" href="${buyLink}" target="_blank" rel="noopener">
+      Buy
+    </a>
+  `;
 
   grid.appendChild(div);
 });
