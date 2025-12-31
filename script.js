@@ -20,7 +20,8 @@ const products = [
     id: "pdt_ANjXatzKvUuliwpfkodzs",
     name: "Test Product",
     description: "This is a test product",
-    price: "৳2542"
+    price: "$19.99"
+    image: "product1.jpg"
   }
 ];
 
