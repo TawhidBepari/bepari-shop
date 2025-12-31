@@ -41,7 +41,9 @@ products.forEach(p => {
     <h3>${p.name}</h3>
     <p>${p.description}</p>
     <strong>${p.price}</strong><br><br>
-    <a href="${buyLink}" target="_blank" rel="noopener">Buy</a>
+    <a class="buy-button" href="${buyLink}" target="_blank" rel="noopener">
+      Buy
+    </a>
   `;
 
   grid.appendChild(div);
