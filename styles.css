@@ -1,64 +1,92 @@
-/* general page */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* Page */
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #222;
   margin: 0;
   padding: 20px;
+  background: #f7f5f2;
+  color: #1d1d1f;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
-/* heading */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* Logo Bar */
+.logo-bar {
+  width: 100%;
+  background: #ffead2;
+  padding: 18px 0;
 }
 
-/* product grid */
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #3a2a12;
+}
+
+/* Page Title */
+h1 {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Product Grid */
 #product-grid {
   display: flex;
-  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 22px;
 }
 
-/* product card */
+/* Product Card */
 #product-grid > div {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
   width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
   text-align: left;
 }
 
-/* product name */
+/* Product Image */
+.product-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Product Name */
 #product-grid h3 {
-  margin-top: 0;
-  font-size: 1.4rem;
+  margin: 6px 0;
+  font-weight: 600;
 }
 
-/* price */
+/* Price */
 #product-grid strong {
-  font-size: 1.2rem;
-  color: #444;
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 1.15rem;
 }
 
-/* button */
+/* Button — unique elegant color */
 a.buy-button {
   display: inline-block;
   margin-top: 12px;
-  padding: 12px 20px;
-  background: #007BFF;
+  padding: 12px 18px;
+  background: #7b4bff;       /* Elegant violet */
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.2s;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: .2s;
 }
 
-/* button hover */
+/* Button Hover */
 a.buy-button:hover {
-  background: #0056b3;
+  background: #5c2dd9;
   transform: translateY(-2px);
 }
