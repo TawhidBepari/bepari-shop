@@ -20,8 +20,15 @@ const products = [
     id: "pdt_ANjXatzKvUuliwpfkodzs",
     name: "Test Product",
     description: "This is a test product",
-    price: "$19.99",
+    price: "$1.00",
     image: "product1.jpg"   // must exist in site root
+  },
+   {
+    id: "pdt_0NW3pPfjpPXRqc9oGompD",
+    name: "THE WEIGHT LOSS RECIPE BOOK",
+    description: "45 Healthy, Flavorful Recipes for Everyday Weight Loss",
+    price: "$29.00",
+    image: "product2.jpg"   // must exist in site root
   }
 ];
 
