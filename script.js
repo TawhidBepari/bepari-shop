@@ -17,14 +17,14 @@ const MINI_APP_URL =
  ***********************/
 const products = [
   {
-    id: "pdt_ANjXatzKvUuliwpfkodzs",
+    id: "pdt_0NW874B7BsRZxxIkJbaM2",
     name: "Test Product",
     description: "This is a test product",
     price: "$1.00",
     image: "product1.jpg"   // must exist in site root
   },
    {
-    id: "pdt_0NW3pPfjpPXRqc9oGompD",
+    id: "pdt_0NW8729RFoWsc3DZPdlol",
     name: "THE WEIGHT LOSS RECIPE BOOK",
     description: "45 Healthy, Flavorful Recipes for Everyday Weight Loss",
     price: "$29.00",
