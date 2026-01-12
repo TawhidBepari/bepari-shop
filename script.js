@@ -16,11 +16,12 @@ const MINI_APP_URL =
  * 3️⃣ Products (UI only — product ID must match Dodo)
  ***********************/
 const products = [
-     {
-    id: "pdt_0NW3pPfjpPXRqc9oGompD",
+   {
     id: "pdt_0NW8729RFoWsc3DZPdlol",
     name: "THE WEIGHT LOSS RECIPE BOOK",
     description: "45 Healthy, Flavorful Recipes for Everyday Weight Loss",
+    price: "$29.00",
+    image: "product2.jpg"   // must exist in site root
   }
 ];
 
