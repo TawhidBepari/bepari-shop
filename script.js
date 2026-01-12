@@ -10,7 +10,7 @@ const affiliateRef = params.get("ref") || "direct";
  * 2️⃣ Apps Script mini-app URL (DO NOT change params)
  ***********************/
 const MINI_APP_URL =
-  "https://script.google.com/macros/s/AKfycbwkYChhvw1fOvMOCN3wR4GUrzyRSg1BnTZ2M0SDFgLhvR7GUME8-fNHrj6NJaIhkJXuxw/exec";
+  "https://script.google.com/macros/s/AKfycbxRJY4fN1oqPpAdacfhfWbO7SXNKj0rZL2zIZJeBLUayXWiUESZMUwbK9N0Rq7xse92Zw/exec";
 
 /***********************
  * 3️⃣ Products (UI only — product ID must match Dodo)
