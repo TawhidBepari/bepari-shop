@@ -20,7 +20,7 @@ const products = [
     id: "pdt_0NW8729RFoWsc3DZPdlol",
     name: "THE WEIGHT LOSS RECIPE BOOK",
     description: "45 Healthy, Flavorful & Low-Calorie Recipes for Everyday Weight Loss",
-    price: "$29.00",
+    price: "$9.00",
     image: "product2.jpg"   // must exist in site root
   }
 ];
