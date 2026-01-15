@@ -22,7 +22,14 @@ const products = [
     description: "45 Healthy, Flavorful & Low-Calorie Recipes for Everyday Weight Loss",
     price: "$9.00",
     image: "product2.jpg"   // must exist in site root
-  }
+  },
+  {
+  id: "pdt_0NW874B7BsRZxxIkJbaM2",
+  name: "My big a** head.",
+  description: "This product is for system testing only.",
+  price: "$1.00",
+  image: "product1.jpg"
+}
 ];
 
 /***********************
